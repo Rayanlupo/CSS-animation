@@ -1,0 +1,38 @@
+body{
+    background-color: white;
+    ;
+
+}
+:root{
+    --led-color: black;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+
+}
+.rocket-head{
+    width: 0;
+    height: 0;
+    border-top: 0;
+    border-bottom: 100px solid red;
+    border-left: 60px solid transparent;
+    border-right: 60px solid transparent;
+
+}
+.rocket-body{
+    background-color: black;
+    width: 120px;
+    height: 300px;
+}
+.rocket-lower-body{
+    display: flex;
+    flex-direction: row;
+}
+.rocket-wing-left{
+    width: 100px;
+    height: 50px;
+    transform: skew(20deg);
+    background-color: black;
+
+}
