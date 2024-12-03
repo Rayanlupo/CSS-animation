@@ -1,18 +1,84 @@
-body{
-    background-color: white;
-    ;
 
+body {
+    background-color: black;
 }
-:root{
-    --led-color: black;
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 500px;
+    width: 750px;
+    border: 5px solid white;
 }
-.container{
+
+#first-block {
+    height: 70px;
+    width: 70px;
+    background-color: transparent;
+    border: 5px solid white;
+    animation: first_anim 4s infinite;
+    animation-timing-function: linear;
+}
+.blocks-container{
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 500px;
+    width: 750px;
+    border: 5px solid white;
 
 }
-.first-block{
-    height: 50px;
-    width: 50px;
-    background-color: transparent.}
+.title{
+    color: rgb(39, 39, 39);
+    padding-bottom: 200px;
+}
+.by-text{
+    color: rgb(39, 39, 39);
+    padding-top: -10px;
+}
+#second-block {
+    height: 70px;
+    width: 70px;
+    
+    background-color: transparent;
+    border: 5px solid white;
+    animation: second_anim 4s linear infinite;
+    animation-delay: 2s; /* Start halfway through the first block's animation */
+}
+
+@keyframes first_anim {
+    0%, 25% {
+        transform: translateX(0px); /* Start and initial pause */
+    }
+    50% {
+        transform: translateX(-300px); /* Move left */
+    }
+    75%, 100% {
+        transform: translateX(0px); /* Return and pause */
+    }
+}
+
+@keyframes second_anim {
+    0%, 25% {
+        transform: translateX(0px); /* Start and initial pause */
+    }
+    50% { transform: translateX(300px); /* Move right quickly */ }
+    75%, 100% {
+        transform: translateX(0px); /* Return and pause */
+    }
+}
